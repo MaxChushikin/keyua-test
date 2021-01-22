@@ -9,14 +9,6 @@ use Illuminate\Http\Request;
 
 class EmployeeController extends Controller
 {
-    //
-
-    public function index ()
-    {
-        $employees = Employee::all();
-
-        dd($employees);
-    }
 
     public function getEmployee ($employee_title)
     {
