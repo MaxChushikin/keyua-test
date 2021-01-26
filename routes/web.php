@@ -15,6 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/employee/', 'EmployeeController@index');
 Route::get('/employee/{employee_title}/', 'EmployeeController@getEmployee');
 Route::get('/employee/{employee_title}/{permission_title}', 'EmployeeController@validateEmployeePermission');

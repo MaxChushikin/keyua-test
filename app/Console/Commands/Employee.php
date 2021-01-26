@@ -41,8 +41,8 @@ class Employee extends Command
         $employee_title = $this->argument('employee');
         $permission_title = $this->argument('permission');
 
-        $result = $employeeController->validateEmployeePermission($employee_title, $permission_title);
+        $result = $employeeController->validateEmployeeCapabilityByTitle($employee_title, $permission_title);
 
-        $this->info((string)$result);
+        $this->info($result);
     }
 }
