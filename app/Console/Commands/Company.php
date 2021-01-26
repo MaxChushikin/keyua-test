@@ -39,11 +39,10 @@ class Company extends Command
     public function handle(EmployeeController $employeeController)
     {
         $employee_title = $this->argument('employee');
+        $employee_capabilities = $employeeController->getEmployeeCapabilities($employee_title);
 
-        $permissions = $employeeController->getEmployee($employee_title);
-
-        foreach ($permissions as $permission) {
-            $this->info($permission->title);
+        foreach ($employee_capabilities as $employee_capability) {
+            $this->info($employee_capability);
         }
     }
 }
